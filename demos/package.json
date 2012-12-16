@@ -1,0 +1,18 @@
+{
+  "name": "santiago-js-20122012",
+  "description": "Demos",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aledbf/SantiagoJS-20-12-2012.git"
+  },
+  "author": "Manuel Alejandro de Brito Fontes <aledbf@gmail.com>",
+  "dependencies": {
+    "express": "~3.0.4",
+    "redis": "~0.8.2",
+    "connect-redis": "~1.4.5",
+    "nodetime": "~0.6.5",
+    "nodefly": "stable",
+    "look": "~0.1.2"
+  }
+}

@@ -1,41 +1,288 @@
 <!doctype html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Santiagojs-20-12-2012 by aledbf</title>
+    <title>node.js</title>
+    <meta name="description" content="Introducción de Cloud9, debug y monitoreo de aplicaciones node.js">
+    <meta name="author" content="Manuel Alejandro de Brito Fontes">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+    </script>
+
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
+
+    <style type="text/css">
+      .reveal section img{
+        border:0;
+        box-shadow: none;
+      }
+
+      .reveal section ul{
+        width: 100%;
+      }
+    </style>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Santiagojs-20-12-2012</h1>
-        <p></p>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="state-background"></div>      
+      <div class="slides">
 
-        <p class="view"><a href="https://github.com/aledbf/SantiagoJS-20-12-2012">View the Project on GitHub <small>aledbf/SantiagoJS-20-12-2012</small></a></p>
+        <section style="vertical-align: middle">
+          <img src="imagenes/nodejs-logo.png">
+        </section>
 
+        <section>
+          <h2>¿Que cubre esta presentación?</h2>
+          <ul style="width: 100%;">
+            <li>Javascript IDE</li>
+            <li>Debug node.js</li>
+            <li>Monitoreo</li>
+          </ul>
+        </section>
 
-        <ul>
-          <li><a href="https://github.com/aledbf/SantiagoJS-20-12-2012/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/aledbf/SantiagoJS-20-12-2012/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/aledbf/SantiagoJS-20-12-2012">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <p>Default</p>
+        <section>
+          <h2>¿Se necesita un IDE?</h2>         
+        </section>
+
+        <section>
+          <h2>¿Alternativas?</h2>
+          <ul>
+            <li>vim?</li>
+            <li>emacs?</li>
+            <li>¿Sublime Text?</li>
+            <li>....</li>
+          </ul>                    
+        </section>
+
+        <section>
+
+          <section style="text-align:center">
+            <img src="imagenes/cloud9.png">
+          </section>
+
+          <section>
+            <h2>Cloud9</h2>         
+            <ul>
+              <li>Empresa fundada en 2010</li>
+              <li>Proyecto Cloud9Ide es opensource</li>
+              <li>Diferentes versiones</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Versiones</h2>
+            <ul style="width: 100%;">
+              <li>Online</li>
+              <li>Local (checkout desde github)</li>
+              <li>Local Nativo</li>
+            </ul>
+            <br>
+            <span>La versión en Github no tiene toda la funcionalidad</span>
+          </section>
+
+          <section>
+            <h2>Features</h2>
+            <ul style="width: 100%;">
+              <li>platforma para JavaScript, Node.js, Ruby, PHP y Python </li>
+              <li>soporte de sintaxis para HTML, CSS</li>
+              <li>para 37 lenguajes.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Features</h2>
+            <ul style="width: 100%;">
+              <li>git</li>
+              <li>FTP</li>
+              <li>SSH</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Integración</h2>
+            <img src="imagenes/3rd-party-services.png">          
+          </section>
+
+          <section>
+            <h2>Online</h2>
+          </section>
+
+          <section>
+            <h2>Instalación local</h2>
+            <br>
+            <div style="text-align:left">
+              <h4>¿Que se requiere?</h4>
+              <ul>
+                <li>NodeJS >= 0.6.16</li>
+                <li>NPM >= 1.1.16</li>
+              </ul>
+              <br>
+              <span style="font-size: 14px">Se require el modulo sourcemint (instalado de forma global)</span>
+              <pre><code>npm install -g sm</code></pre>
+              <h4>¿Como se instala?</h4>
+              <br>
+              <pre><code>
+  git clone https://github.com/ajaxorg/cloud9.git cloud9
+  cd cloud9
+  sm install
+            </code></pre>
+          </div>
+        </section>
+
+        <section>
+          <h1>DEMO</h1>
+        </section>
+
+        <section>
+          <h2>¿Qué le falta?</h2>
+          "links" en requires :P
+        </section>
+        
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/aledbf">aledbf</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+
+      <section>
+        <section>
+          <h2>¿debug?</h2>
+        </section>
+
+        <section>
+          <h2>¿debug?</h2>
+          <ul>
+            <li>Interactuar con el flujo de ejecución</li>
+            <li>Modificar variables</li>
+            <li>Breakpoints</li>
+            <li>Expresiones</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>node-inspector</h2>
+          <pre><code>npm install -g node-inspector</code></pre>        
+        </section>
+
+        <section>
+          <h2>node-inspector</h2>
+          <pre><code>node --debug script.js</code></pre>        
+          <br>
+          <pre><code>node --debug-brk script.js</code></pre>        
+        </section>
+
+        <section>
+          <h2>node-inspector</h2>
+          Si la aplicación esta corriendo
+          <br>
+          <pre><code>kill -s USR1 2345</code></pre>        
+        </section>
+ 
+        <section>
+          <h2>DEMO</h2>
+        </section>
+
+      </section>
+      <section>
+        <section>
+          <h2>Monitoreo</h2>
+        </section>
+
+        <section>
+          <h2>Opciones</h2>
+          <ul>
+            <li>nodetime</li>
+            <li>nodefly</li>
+            <li>look</li>
+            <li>New Relic (aun no)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>nodetime</h2>
+          <ul>
+            <li>Metricas</li>
+            <li>Monitoreo de bases de dato</li>
+            <li>CPU Profiling</li>
+            <li>Memory Profiling</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>nodefly</h2>
+          <ul>
+            <li>Alternativa a nodetime</li>
+            <li>Aun en beta (inestable)</li>
+            <li>Provee información del event loop</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>look</h2>
+          <ul>
+            <li>Basado en nodetime</li>
+            <li>Servidor local</li>
+            <li>La interfaz web es distinta</li>
+            <li>No tiene persistencia</li>
+          </ul>
+          
+        </section>
+
+        <section>
+          <h2>Inconvenientes</h2>
+          <ul>
+            <li>memory overhead</li>
+            <li>stacktrace</li>
+            <li>seguridad</li>
+            <li>persistencia (historia)</li>
+          </ul>
+          
+        </section>
+
+      </section>
+
+      <section>          
+        <h2>¿Preguntas?</h2>
+      </section>
+
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+  </div>      
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+  <script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+      theme: 'simple', // available themes are in /css/theme
+      transition: 'linear', // default/cube/page/concave/zoom/linear/none
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+    });
+  </script>
   </body>
 </html>
