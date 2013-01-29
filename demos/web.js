@@ -34,7 +34,7 @@ app.get('/error', function(req, res) {
   res.send(500);
 });
 
-app.listen(3000);
-console.log('Express app started on port 3000');
+app.listen(process.env.PORT||3000);
+console.log('Express app started on port ' + process.env.PORT);
 
 console.log('PID: ' + process.pid);

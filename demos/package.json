@@ -8,11 +8,11 @@
   },
   "author": "Manuel Alejandro de Brito Fontes <aledbf@gmail.com>",
   "dependencies": {
-    "express": "~3.0.4",
+    "express": "~3.1.0",
     "redis": "~0.8.2",
     "connect-redis": "~1.4.5",
-    "nodetime": "~0.6.5",
-    "nodefly": "stable",
+    "nodetime": "~0.6.8",
+    "nodefly": "~0.1.24",
     "look": "~0.1.2"
   }
 }
